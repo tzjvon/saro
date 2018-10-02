@@ -1,0 +1,58 @@
+// https://eslint.org/docs/user-guide/configuring
+
+module.exports = {
+	root: true,
+	parser: 'babel-eslint',
+	parserOptions: {
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	env: {
+		browser: true,
+		es6: true
+	},
+	globals: {
+		require: true,
+		module: true
+	},
+	extends: [
+		"eslint:recommended",
+		"plugin:react/recommended"
+		// https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
+		// consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
+		// 'plugin:vue/essential',
+		// https://github.com/standard/standard/blob/master/docs/RULES-en.md
+		// 'standard'
+	],
+	// required to lint *.vue files
+	plugins: [
+		"react"
+	],
+
+	// add your custom rules here
+	// 0 = off, 1 = warn, 2 = error
+	rules: {
+		"react/display-name": "off",
+		"react/prop-types": "off",
+		"no-unreachable": "error",
+
+		// allow async-await
+		'generator-star-spacing': 'off',
+		// allow debugger during development
+		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+	},
+	"settings": {
+		"react": {
+			"createClass": "createReactClass", // Regex for Component Factory to use,
+			// default to "createReactClass"
+			"pragma": "React", // Pragma to use, default to "React"
+			"version": "15.0", // React version, default to the latest React stable release
+			"flowVersion": "0.53" // Flow version
+		},
+		"propWrapperFunctions": ["forbidExtraProps"] // The names of any functions used to wrap the
+		// propTypes object, e.g. `forbidExtraProps`.
+		// If this isn't set, any propTypes wrapped in
+		// a function will be skipped.
+	}
+}
