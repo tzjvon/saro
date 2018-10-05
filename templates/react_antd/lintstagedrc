@@ -1,0 +1,10 @@
+{
+	"src/**/*.jsx": [
+		"./node_modules/.bin/eslint --fix",
+		"git add"
+	],
+	"src/**/*.js": [
+		"./node_modules/.bin/eslint --fix",
+		"git add"
+	]
+}

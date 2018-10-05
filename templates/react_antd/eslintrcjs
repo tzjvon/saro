@@ -37,6 +37,10 @@ module.exports = {
 		"react/prop-types": "off",
 		"no-unreachable": "error",
 
+		"accessor-pairs": "warn",
+		"quotes": ["warn", "single"],
+		"valid-typeof": "error",
+
 		// allow async-await
 		'generator-star-spacing': 'off',
 		// allow debugger during development
@@ -50,6 +54,7 @@ module.exports = {
 			"version": "15.0", // React version, default to the latest React stable release
 			"flowVersion": "0.53" // Flow version
 		},
+		"no-undef": ["error", {"undefIgnorePattern": "Saro"}],
 		"propWrapperFunctions": ["forbidExtraProps"] // The names of any functions used to wrap the
 		// propTypes object, e.g. `forbidExtraProps`.
 		// If this isn't set, any propTypes wrapped in

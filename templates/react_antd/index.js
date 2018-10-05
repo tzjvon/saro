@@ -47,6 +47,11 @@ module.exports = function (creater, params, helper, cb) {
 	creater.template(template, 'babelrc', path.join(projectPath, '.babelrc'))
 	creater.template(template, 'eslintrcjs', path.join(projectPath, '.eslintrc.js'))
 	creater.template(template, 'eslintignore', path.join(projectPath, '.eslintignore'))
+	creater.template(template, 'editorconfig', path.join(projectPath, '.editorconfig'))
+	creater.template(template, 'scss-lint', path.join(projectPath, '.scss-lint.yml'))
+	creater.template(template, 'csscomb', path.join(projectPath, '.csscomb.json'))
+	creater.template(template, 'lintstagedrc', path.join(projectPath, '.lintstagedrc'))
+
 	creater.template(template, 'indexhtml', path.join(sourceDir, 'index.html'))
 	creater.template(template, 'mainjs', path.join(sourceDir, 'main.js'))
 	creater.template(template, 'bundle', path.join(sourceDir, 'bundle.js'))

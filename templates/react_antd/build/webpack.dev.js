@@ -59,9 +59,9 @@ module.exports = {
 			loader: "url-loader?limit=8192"
 		}, {
 			test: /\.scss$/,
-			use: ExtractTextPlugin.extract({
-				fallback: "style-loader",
-				use: [{
+			use: [
+				{loader: "style-loader"},
+				{
 					loader: "css-loader",
 					options: {
 						importLoaders: 2,
@@ -82,8 +82,8 @@ module.exports = {
 					options: {
 						sourceMap: true
 					}
-				}]
-			})
+				}
+			]
 		}, {
 			test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
 			loader: "file-loader"
@@ -129,11 +129,6 @@ module.exports = {
 			loaders: ["babel-loader"],
 		}),
 		// new BundleAnalyzerPlugin(),
-		new ExtractTextPlugin({
-			// filename: '[name].[contenthash:5].css',
-			filename: '[name].css',
-			allChunks: true
-		}),
 
 		new FriendlyErrorsPlugin({
 			compilationSuccessInfo: {

@@ -8,6 +8,7 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --inline --config build/webpack.dev.js",
     "start": "npm run dev",
     "clear": "rimraf dist",
+    "precommit": "lint-staged",
     "build": "npm run clear && NODE_ENV=production webpack -p --progress --colors --config build/webpack.production.config.js"
   },
   "author": "",
@@ -73,6 +74,8 @@
     "node-sass": "^4.9.3",
     "open-browser-webpack-plugin": "0.0.5",
     "postcss": "^6.0.21",
+    "husky": "^1.1.0",
+    "lint-staged": "^7.3.0",
     "postcss-cssnext": "^3.1.0",
     "postcss-flexbugs-fixes": "^3.3.1",
     "postcss-import": "^11.1.0",

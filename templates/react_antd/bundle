@@ -1,5 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 
 
 class Bundle extends React.Component {
@@ -33,11 +33,11 @@ class Bundle extends React.Component {
 		return this.state.mod
 			? this.props.children(this.state.mod)
 			: <div style={{
-				height: "100vh",
-				display:"flex",
-				flexDirection: "row",
-				alignItems: "center",
-				justifyContent: "center",
+				height: '100vh',
+				display:'flex',
+				flexDirection: 'row',
+				alignItems: 'center',
+				justifyContent: 'center',
 			}}>loading...</div>
 	}
 }

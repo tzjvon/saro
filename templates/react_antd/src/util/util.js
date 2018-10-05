@@ -1,5 +1,5 @@
 import config from '@/config/conf'
-let {tokenKey, userIdKey, userInfo} = config.localStorage
+let { tokenKey } = config.localStorage
 
 let util = {}
 

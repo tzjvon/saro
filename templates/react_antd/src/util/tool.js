@@ -1,9 +1,9 @@
-import React from "react"
-import {Switch, Route, NavLink} from "react-router-dom"
+import React from 'react'
+import {Switch, Route, NavLink} from 'react-router-dom'
 import {
 	Menu,
 	Icon
-} from "antd"
+} from 'antd'
 const SubMenu = Menu.SubMenu
 
 export const _routes = (_rs) => {

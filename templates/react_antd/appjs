@@ -1,10 +1,10 @@
-import React from "react"
-import {Provider} from "react-redux"
-import RouteMap from "./routes/"
-import store from "./store/"
+import React from 'react'
+import {Provider} from 'react-redux'
+import RouteMap from './routes/'
+import store from './store/'
 import './app.<%= css %>'
 
 export default () =>
 <Provider store={store} >
-  <RouteMap/>
+	<RouteMap/>
 </Provider>
