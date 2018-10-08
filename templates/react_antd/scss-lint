@@ -18,14 +18,14 @@ linters:
 
   BemDepth:
     enabled: false
-    max_elements: 1
+    max_elements: 2
 
   BorderZero:
     enabled: true
     convention: zero # or `none`
 
   ChainedClasses:
-    enabled: false
+    enabled: true
 
   ColorKeyword:
     enabled: true
@@ -34,7 +34,7 @@ linters:
     enabled: false
 
   Comment:
-    enabled: true
+    enabled: false
     style: silent
 
   DebugStatement:
@@ -79,20 +79,19 @@ linters:
     enabled: true
 
   IdSelector:
-    enabled: true
+    enabled: false
 
   ImportantRule:
-    enabled: true
+    enabled: false
 
   ImportPath:
-    enabled: true
+    enabled: false
     leading_underscore: false
     filename_extension: false
 
   Indentation:
     enabled: true
-    allow_non_nested_indentation: false
-    # character: space # or 'tab'
+    allow_non_nested_indentation: true
     character: tab # or 'space'
     width: 1
 
@@ -111,7 +110,7 @@ linters:
 
   NestingDepth:
     enabled: true
-    max_depth: 3
+    max_depth: 4
     ignore_parent_selectors: false
 
   PlaceholderInExtend:
@@ -166,7 +165,8 @@ linters:
 
   SelectorFormat:
     enabled: true
-    convention: hyphenated_lowercase # or 'classic_BEM', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
+    convention: hyphenated_BEM # or 'classic_BEM', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
+    ignored_types: id # or 'attribute', or 'class', or 'element', or 'id', or 'placeholder'
 
   Shorthand:
     enabled: true
@@ -226,10 +226,10 @@ linters:
     enabled: true
 
   TrailingZero:
-    enabled: false
+    enabled: true
 
   TransitionAll:
-    enabled: false
+    enabled: true
 
   UnnecessaryMantissa:
     enabled: true
@@ -238,7 +238,7 @@ linters:
     enabled: true
 
   UrlFormat:
-    enabled: true
+    enabled: false
 
   UrlQuotes:
     enabled: true

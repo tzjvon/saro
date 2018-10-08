@@ -205,7 +205,7 @@ module.exports = function (creater, params, helper, cb) {
 			console.log(`${install.stderr}${install.stdout}`)
 		}
 		console.log(chalk.green(`创建项目 ${chalk.green.bold(projectName)} 成功！`))
-		console.log(chalk.green(`请进入项目目录 ${chalk.green.bold(projectName)} 开始工作吧！👂😊`))
+		console.log(chalk.green(`请进入项目目录 ${chalk.green.bold(projectName)} 开始工作吧！🐒`))
 		if (typeof cb === 'function') {
 			cb()
 		}
