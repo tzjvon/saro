@@ -84,7 +84,7 @@ export const iterator_routes = (arr, prePath) => {
 	let newArr = iteration_key_increase(arr)
 
 	const iteration = (arr, prePath) => {
-		if (!prePath) {prePath = ""}
+		if (!prePath) {prePath = ''}
 		return arr.map((item) => {
 			if (item.children && item.children.length) {
 				if (item.component) {

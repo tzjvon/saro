@@ -12,6 +12,8 @@ const HappyThreadPool = HappyPack.ThreadPool({
 	size: os.cpus().length
 })
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+
+const baseConfig = require('./webpack.base.conf')
 const utils = require('./utils.js')
 
 let PORT = 5050
@@ -23,19 +25,9 @@ module.exports = {
 		"react-hot-loader/patch",
 		"./src/main.js"
 	],
-	output: {
-		path: __dirname + "/dist",
-		filename: "[name].[hash].js",
-		publicPath: '/'
-		// chunkFilename: "[name]-[id].[chunkhash:8].bundle.js",
-	},
+	output: baseConfig.output,
 
-	resolve: {
-		extensions: ['.js', '.jsx', '.json'],
-		alias: {
-			'@': resolve('./src'),
-		}
-	},
+	resolve: baseConfig.resolve,
 
 	module: {
 		rules: [{

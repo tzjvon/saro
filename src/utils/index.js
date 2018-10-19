@@ -203,8 +203,8 @@ exports.getPkgItemByKey = function(key) {
 }
 
 exports.printPkgVersion = function() {
-	const taroVersion = exports.getPkgVersion()
-	console.log(`💖 Saro v${taroVersion}`)
+	const saroVersion = exports.getPkgVersion()
+	console.log(`🐒 Saro v${saroVersion}`)
 	console.log()
 }
 

@@ -13,6 +13,9 @@
 				"libraryName": "antd",
 				"style": "css"
 			}
-		]
+		],
+		"transform-runtime",
+		"transform-decorators-legacy",
+		"transform-es2015-modules-commonjs"
 	]
 }

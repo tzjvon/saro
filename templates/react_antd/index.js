@@ -84,6 +84,11 @@ module.exports = function (creater, params, helper, cb) {
 	creater.template(template, 'build/utils.js', path.join(projectPath, 'build', 'utils.js'))
 	creater.template(template, 'build/webpack.dev.js', path.join(projectPath, 'build', 'webpack.dev.js'))
 	creater.template(template, 'build/webpack.production.config.js', path.join(projectPath, 'build', 'webpack.production.config.js'))
+	creater.template(template, 'build/webpack.prod.conf.js', path.join(projectPath, 'build', 'webpack.prod.conf.js'))
+	creater.template(template, 'build/config.js', path.join(projectPath, 'build', 'config.js'))
+	creater.template(template, 'build/webpack.base.conf.js', path.join(projectPath, 'build', 'webpack.base.conf.js'))
+	creater.template(template, 'build/build.js', path.join(projectPath, 'build', 'build.js'))
+	creater.template(template, 'build/check-version.js', path.join(projectPath, 'build', 'check-version.js'))
 
 
 
@@ -129,7 +134,7 @@ module.exports = function (creater, params, helper, cb) {
 			typescript: true
 		})
 	} else {
-		creater.template(template, 'pagejs', path.join(sourceDir, 'pages', 'index', 'index.js'), {
+		creater.template(template, 'pagejs', path.join(sourceDir, 'pages', 'index', 'index.jsx'), {
 			css: currentStyleExt
 		})
 	}
@@ -205,7 +210,7 @@ module.exports = function (creater, params, helper, cb) {
 			console.log(`${install.stderr}${install.stdout}`)
 		}
 		console.log(chalk.green(`创建项目 ${chalk.green.bold(projectName)} 成功！`))
-		console.log(chalk.green(`请进入项目目录 ${chalk.green.bold(projectName)} 开始工作吧！🐒`))
+		console.log(chalk.green(`👉接下来请开始你的表演！🐒`))
 		if (typeof cb === 'function') {
 			cb()
 		}

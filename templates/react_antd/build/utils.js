@@ -1,5 +1,6 @@
 const path = require('path')
 const packageInfo = require('../package.json')
+const config = require('./config')
 
 exports.createNotifierCallback = () => {
 	const notifier = require('node-notifier')
@@ -17,6 +18,14 @@ exports.createNotifierCallback = () => {
 			icon: path.join(__dirname, 'logo.png')
 		})
 	}
+}
+
+exports.assetsPath = function(_path) {
+	const assetsSubDirectory = process.env.NODE_ENV === 'production' ?
+		config.build.assetsSubDirectory :
+		config.dev.assetsSubDirectory
+
+	return path.posix.join(assetsSubDirectory, _path)
 }
 
 exports.rootPathSrc = path.join(__dirname, '../src')
